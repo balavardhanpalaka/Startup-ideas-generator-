@@ -1,0 +1,10 @@
+{
+  "name": "startup-idea-generator",
+  "version": "1.0.0",
+  "description": "Click a button → get a random business idea. Small static JS project.",
+  "scripts": {
+    "start": "npx serve . --single"
+  },
+  "author": "generated-by-copilot",
+  "license": "MIT"
+}

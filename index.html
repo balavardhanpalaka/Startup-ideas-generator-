@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Startup Idea Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Click a button — get a random business idea. Save favorites and download them. Fun + creative JS project." />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Startup Idea Generator</h1>
+      <p class="tagline">Click the button (or press Space) to get a random business idea.</p>
+    </header>
+
+    <section class="card" id="ideaCard" aria-live="polite">
+      <div class="idea-text" id="ideaText">Loading ideas…</div>
+      <div class="idea-meta" id="ideaMeta"></div>
+      <div class="card-actions">
+        <button id="newBtn" class="btn primary">New idea (Space)</button>
+        <button id="saveBtn" class="btn">Save to favorites</button>
+        <button id="copyBtn" class="btn">Copy</button>
+      </div>
+    </section>
+
+    <section class="controls">
+      <div class="left">
+        <button id="showAllBtn" class="btn small">Show all ideas</button>
+        <button id="downloadBtn" class="btn small">Download favorites</button>
+      </div>
+      <div class="right">
+        <input id="addInput" class="input" placeholder="Add your own idea (press Enter)" />
+      </div>
+    </section>
+
+    <section id="favorites" class="panel">
+      <h2>Favorites</h2>
+      <ul id="favList" class="list">No favorites yet — save ideas you like.</ul>
+      <div class="fav-actions">
+        <button id="clearFavBtn" class="btn small">Clear favorites</button>
+      </div>
+    </section>
+
+    <footer>
+      <small>
+        Ideas loaded from ideas.json • Static demo • <a href="https://github.com">source</a>
+      </small>
+    </footer>
+  </main>
+
+  <!-- Modal for all ideas -->
+  <div id="allModal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header>
+        <h3 id="modalTitle">All ideas</h3>
+        <button id="closeModal" class="btn small">Close</button>
+      </header>
+      <div id="allList" class="all-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
